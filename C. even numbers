@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   
+   int start,end,num,count,prime,temp;
+   printf("enter start and end\n")	;
+   scanf("%d%d", &start,&end);
+   if(start > end)
+   {temp=start;
+   start = end;
+   end=temp;
+   }
+   printf("prime numbers between %d and %d are\n",start,end);
+   for(num=start;num<=end;num++)
+   {
+   	prime=1;
+   	for (count=2;count<num;count++)
+   	{
+	   if (num% count==0)  
+   	{
+   		prime=0;
+   		
+	   }
+   	
+	   }
+   	if(prime)printf("%d\t",num);
+   }
+
+	
+	
+	
